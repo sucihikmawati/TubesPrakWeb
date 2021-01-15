@@ -7,23 +7,27 @@
 <br>
 <ul class="nav nav-tabs">
     <li class="nav-item">
-    <a class="nav-link disabled" href="home" tabindex="-1" aria-disabled="true">Pesawat</a>
+    <a class="nav-link disabled" href="<?= base_url("") ?>/home" tabindex="-1" aria-disabled="true">Pesawat</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="detail_kereta" tabindex="-1" aria-disabled="true">Kereta</a>
+    <a class="nav-link disabled" href="<?= base_url("") ?>/detail_kereta" tabindex="-1" aria-disabled="true">Kereta</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="detail_kapal" tabindex="-1" aria-disabled="true">Kapal</a>
+    <a class="nav-link disabled" href="<?= base_url("") ?>/detail_kapal" tabindex="-1" aria-disabled="true">Kapal</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="detail_bus" tabindex="-1" aria-disabled="true">Bus</a>
+    <a class="nav-link disabled" href="<?= base_url("") ?>/detail_bus" tabindex="-1" aria-disabled="true">Bus</a>
+  <!-- </li>
+   <li class="nav-item">
+    <a class="nav-link disabled" href="<?= base_url("") ?>/auth/login" tabindex="-1" aria-disabled="true">Login</a>
+  </li>
   </li>
    <li class="nav-item">
-    <a class="nav-link disabled" href="auth/login" tabindex="-1" aria-disabled="true">Login</a>
-  </li>
+    <a class="nav-link disabled" href="<?= base_url("") ?>/auth/register" tabindex="-1" aria-disabled="true">Register</a>
+  </li> -->
   </li>
    <li class="nav-item">
-    <a class="nav-link disabled" href="auth/register" tabindex="-1" aria-disabled="true">Register</a>
+    <a class="nav-link disabled" href="<?= base_url("") ?>/auth/logout" tabindex="-1" aria-disabled="true">Logout</a>
   </li>
 </ul>
 </div>
@@ -51,7 +55,7 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="pesan" class="btn btn-success">Pilih</a></td>
+      <td><a href="<?= base_url("") ?>/pesan" class="btn btn-success">Pilih</a></td>
     </tr>
   </tbody>
 </table>

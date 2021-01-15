@@ -1,10 +1,14 @@
 <?php namespace App\Controllers;
 
+use App\Models\TiketModel;
+
 class Dashboard extends BaseController
 {
 	public function index()
 	{
-		return view("dashboard");
+		$model = new TiketModel();
+		$data = $model->findAll();
+		return view("dashboard", ['data' => $data]);
 	}
 
 	//--------------------------------------------------------------------

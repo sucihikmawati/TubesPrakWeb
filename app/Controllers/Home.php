@@ -4,7 +4,11 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('home');
+		if(!session()->get('logged_in')){
+			return redirect()->to('/auth/login');
+		} else {
+			return view('home');
+		}
 	}
 
 	//--------------------------------------------------------------------

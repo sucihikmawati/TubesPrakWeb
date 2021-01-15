@@ -33,12 +33,19 @@
   <tbody>
      <tr>
       <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <?php $i=1; ?>
+        <?php foreach($data as $b) : ?>
+          <tr>
+            <!-- <th scope="row"><?= $i++;?> </th> -->
+            <td><?= $b['id'];?></td>
+            <td><?= $b['penyedia'];?></td>
+            <td><?= $b['waktu'];?></td>
+            <td><?= $b['jurusan'];?></td>
+            <td><?= $b['kelas'];?></td>
+            <td><?= $b['harga'];?></td>
+            <td><?= $b['kursi'];?></td>
+          </tr>
+        <?php endforeach; ?>
     </tr>
   </tbody>
 </table>

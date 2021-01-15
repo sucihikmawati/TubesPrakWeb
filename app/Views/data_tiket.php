@@ -94,6 +94,22 @@
           </tr>
         </thead>
         <tbody>
+        <?php $i=1; ?>
+        <?php foreach($data as $b) : ?>
+          <tr>
+            <th scope="row"><?= $i++;?> </th>
+            <td><?= $b['penyedia'];?></td>
+            <td><?= $b['waktu'];?></td>
+            <td><?= $b['jurusan'];?></td>
+            <td><?= $b['kelas'];?></td>
+            <td><?= $b['harga'];?></td>
+            <td><?= $b['kursi'];?></td>
+            <td>
+              <a href="<?= base_url("edit_tiket/edit")?>/<?= $b['id'];?>" class="btn btn-success">edit</a>
+              <a href="<?= base_url("data_tiket/hapus")?>/<?= $b['id'];?>" class="btn btn-success">Hapus</a>
+            </td>
+          </tr>
+        <?php endforeach; ?>
           <tr>
             <td></td>
             <td></td>
@@ -102,10 +118,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td>
-              <a href="edit_tiket" class="btn btn-success">edit</a>
-              <a href="data_tiket" class="btn btn-success">Hapus</a>
-            </td>
+            
           </tr>
 
         </tbody>

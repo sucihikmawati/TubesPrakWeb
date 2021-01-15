@@ -73,54 +73,58 @@
     <section class="content">
       <div class="container-fluid">
         <div class="jumbotron">
+        <?php if(isset($validation)):?>
+        <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+        <?php endif;?>
 <div class="container">
    <h1 class="mt-2">Tambah Data Tiket</h1>
-<form>
+<form action="<?=base_url("")?>\tambah\save" method="post">
   <div class="row mb-3">
     <label for="inputPesawat" class="col-sm-1 col-form-label">No</label>
     <div class="col-sm-6">
-      <input type="jenis pesawat" class="form-control" id="inputPesawat">
+      <input type="jenis pesawat" class="form-control" id="notiket" name="notiket">
     </div>
   </div>
   <div class="row mb-3">
     <label for="inputPesawat" class="col-sm-1 col-form-label">Penyedia</label>
     <div class="col-sm-6">
-      <input type="jenis pesawat" class="form-control" id="inputPesawat">
+      <input type="jenis pesawat" class="form-control" id="inputPesawat" name="inputPesawat">
     </div>
   </div>
     <div class="row mb-3">
     <label for="inputWaktu" class="col-sm-1 col-form-label">Waktu</label>
     <div class="col-sm-6">
-      <input type="Waktu" class="form-control" id="inputWaktu">
+      <input type="Date" class="form-control" id="inputWaktu" name="inputWaktu">
     </div>
   </div>
     <div class="row mb-3">
     <label for="inputJurusan" class="col-sm-1 col-form-label">Jurusan</label>
     <div class="col-sm-6">
-      <input type="Jurusan" class="form-control" id="inputJurusan">
+      <input type="Jurusan" class="form-control" id="inputJurusan" name="inputJurusan">
     </div>
   </div>
     <div class="row mb-3">
     <label for="inputKelas" class="col-sm-1 col-form-label">Kelas</label>
     <div class="col-sm-6">
-      <input type="Kelas" class="form-control" id="inputKelas">
+      <input type="Kelas" class="form-control" id="inputKelas" name="inputKelas">
     </div>
   </div>
   <div class="row mb-3">
     <label for="inputPenumpang" class="col-sm-1 col-form-label">Harga Tiket</label>
     <div class="col-sm-6">
-      <input type="Jumlah Penumpang" class="form-control" id="inputPenumpang">
+      <input type="Jumlah Penumpang" class="form-control" id="inputPenumpang" name="inputPenumpang">
     </div>
   </div>
   <div class="row mb-3">
     <label for="inputTotal" class="col-sm-1 col-form-label">Kursi</label>
     <div class="col-sm-6">
-      <input type="Total Hrga" class="form-control" id="inputTotal">
+      <input type="Total Hrga" class="form-control" id="inputTotal" name="inputTotal">
     </div>
   </div>
+  <button type="submit" class="btn btn-primary btn-block">Tambah</button>
 </form>
   <div>
- <a href="data_tiket" class="btn btn-success">Tambah</a>
+ <!-- <a href="data_tiket" class="btn btn-success">Tambah</a> -->
  <a href="data_tiket" class="btn btn-success">Kembali</a>
 </div>
 </div>
